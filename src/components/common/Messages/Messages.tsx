@@ -1,6 +1,7 @@
 import React from "react";
-import {Message} from "../../types/types";
-import {MessageItem} from "./Message";
+import {Message} from "../../../types/types";
+import {MessageItem} from "./MessageItem/MessageItem";
+import styles from './Messages.module.css'
 
 export const Messages: React.FC<MessagesListProps> = ({messages}) => {
 
@@ -9,7 +10,7 @@ export const Messages: React.FC<MessagesListProps> = ({messages}) => {
     })
 
     return (
-        <div>
+        <div className={styles.messages}>
             {messagesList}
         </div>
     );
