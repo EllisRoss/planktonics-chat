@@ -9,4 +9,14 @@
 
 .form__button{
     width: 80px;
+    background-color: darkgrey;
+    border: solid darkgrey 1px;
+}
+.form__button:hover{
+    border: solid lightgrey 1px;
+    background-color: lightgrey;
+}
+.form__button:focus{
+    border: solid lightgrey 1px;
+    background-color: lightgrey;
 }
