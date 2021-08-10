@@ -1,6 +1,6 @@
 import {ThunkAction} from "redux-thunk";
 import {AppStateType, InferActionTypes} from "./store";
-import {message} from "../types/types";
+import {Message} from "../types/types";
 
 const MESSAGES_CHANGED = 'planktonics_chat/business_chat/MESSAGES_CHANGED';
 const MESSAGE_ADDED = 'planktonics_chat/business_chat/MESSAGE_ADDED';
@@ -8,7 +8,7 @@ const MESSAGE_ADDED = 'planktonics_chat/business_chat/MESSAGE_ADDED';
 let initialState = {
     messages: [
         {id: '1', message: 'Hello', userName: 'Mark', userId: '12', date: new Date('December 17, 1995 03:24:00')}
-    ] as message[],
+    ] as Message[],
 };
 
 const businessChatReducer = (state = initialState, action: ActionTypes): InitialStateType => {
@@ -22,14 +22,14 @@ const businessChatReducer = (state = initialState, action: ActionTypes): Initial
     }
 }
 
-const _setMessages = (state: InitialStateType, newMessages: message[]): InitialStateType => {
+const _setMessages = (state: InitialStateType, newMessages: Message[]): InitialStateType => {
     return {
         ...state,
         messages: [...newMessages],
     }
 }
 
-const _addMessage = (state: InitialStateType, newMessage: message): InitialStateType => {
+const _addMessage = (state: InitialStateType, newMessage: Message): InitialStateType => {
     return {
         ...state,
         messages: [...state.messages, newMessage],
@@ -37,8 +37,8 @@ const _addMessage = (state: InitialStateType, newMessage: message): InitialState
 }
 
 export const businessChatActions = {
-    messagesChanged: (newMessages: message[]) => ({type: MESSAGES_CHANGED, newMessages} as const),
-    messageAdded: (newMessage: message) => ({type: MESSAGE_ADDED, newMessage} as const),
+    messagesChanged: (newMessages: Message[]) => ({type: MESSAGES_CHANGED, newMessages} as const),
+    messageAdded: (newMessage: Message) => ({type: MESSAGE_ADDED, newMessage} as const),
 }
 
 // export const setInitializedThunkCreator = (): ThunkType =>
