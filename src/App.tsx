@@ -1,9 +1,9 @@
 import React from 'react';
 import {Redirect, Route, Switch} from "react-router-dom";
 import './App.css';
-import {BusinessChat} from "./components/BusinessChat/BusinessChat";
+import {BusinessChat} from "./components/Chats/BusinessChat";
 import {Header} from "./components/Header/Header";
-import {CommunicationChat} from "./components/CommunicationChat/CommunicationChat";
+import {CommunicationChat} from "./components/Chats/CommunicationChat";
 
 function App() {
     return (

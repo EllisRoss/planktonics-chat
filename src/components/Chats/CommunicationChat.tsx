@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Messages} from "../common/Messages/Messages";
 import {AddMessageForm, FormValues} from "../common/AddMessageForm/AddMessageForm";
 import {Message} from "../../types/types";
-import styles from './CommunicationChat.module.css'
+import styles from './Chat.module.css'
 import {FormikHelpers} from "formik";
 import {Divider} from "antd";
 import {selectCommunicationMessages} from "../../redux/communicationChatSelectors";

@@ -6,7 +6,7 @@ import {AddMessageForm, FormValues} from "../common/AddMessageForm/AddMessageFor
 import {Message} from "../../types/types";
 import {v1} from "uuid";
 import {businessChatActions} from "../../redux/businessChatReducer";
-import styles from './BusinessChat.module.css'
+import styles from './Chat.module.css'
 import {FormikHelpers} from "formik";
 import {Divider} from "antd";
 
