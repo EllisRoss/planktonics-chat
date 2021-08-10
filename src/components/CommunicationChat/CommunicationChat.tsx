@@ -1,31 +1,30 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {selectBusinessMessages} from "../../redux/businessChatSelectors";
 import {Messages} from "../common/Messages/Messages";
 import {AddMessageForm, FormValues} from "../common/AddMessageForm/AddMessageForm";
 import {Message} from "../../types/types";
-import {v1} from "uuid";
-import {businessChatActions} from "../../redux/businessChatReducer";
-import styles from './BusinessChat.module.css'
+import styles from './CommunicationChat.module.css'
 import {FormikHelpers} from "formik";
 import {Divider} from "antd";
+import {selectCommunicationMessages} from "../../redux/communicationChatSelectors";
+import {communicationChatActions} from "../../redux/communicationChatReducer";
+import { v1 } from "uuid";
 
-export const BusinessChat: React.FC = () => {
-    const messages = useSelector(selectBusinessMessages);
+export const CommunicationChat: React.FC = () => {
+    const messages = useSelector(selectCommunicationMessages);
     const dispatch = useDispatch();
 
-    console.log('fix me (BusinessChat)')
+    console.log('fix me (CommunicationChat)')
 
     const sendMessage = (values: FormValues, {resetForm}: FormikHelpers<FormValues>) => {
-
         const newMessage: Message = {
-            userName: 'Mark',
+            userName: 'Peter',
             message: values.msg,
             userId: '12',
             date: new Date(Date.now()),
             id: v1(),
         }
-        dispatch(businessChatActions.messageAdded(newMessage))
+        dispatch(communicationChatActions.messageAdded(newMessage))
         resetForm({})
     }
 
