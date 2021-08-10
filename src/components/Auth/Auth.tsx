@@ -17,7 +17,7 @@ export const Auth: React.FC = () => {
         return <Redirect to='/chat'/>
     }
 
-    const onСlick = () => {
+    const onClick = () => {
         if (value.length > 0) {
             dispatch(authActions.userNameChanged(value));
             dispatch(authActions.userIdChanged(v1()));
@@ -34,7 +34,7 @@ export const Auth: React.FC = () => {
                     <Input className={styles.auth__input} value={value} onChange={e => setValue(e.target.value)}/>
                 </p>
                 <div className={styles.auth__button}>
-                    <Button onClick={onСlick}>Submit</Button>
+                    <Button onClick={onClick}>Submit</Button>
                 </div>
             </div>
         </div>
