@@ -8,7 +8,9 @@ const MESSAGE_ADDED = 'planktonics_chat/communication_chat/MESSAGE_ADDED';
 
 let initialState = {
     messages: [
-        {id: v1(), message: 'Hello', userName: 'Peter', userId: v1(), date: new Date(Date.now())}
+        {id: v1(), message: 'Hello', userName: 'Peter', userId: v1(), date: new Date(Date.now())},
+        {id: v1(), message: 'Hi', userName: 'Mark', userId: v1(), date: new Date(Date.now() + 10000)},
+        {id: v1(), message: 'Nice', userName: 'Peter', userId: v1(), date: new Date(Date.now() + 10000)},
     ] as Message[],
 };
 

@@ -1,13 +1,16 @@
 import {ThunkAction} from "redux-thunk";
 import {AppStateType, InferActionTypes} from "./store";
 import {Message} from "../types/types";
+import {v1} from "uuid";
 
 const MESSAGES_CHANGED = 'planktonics_chat/business_chat/MESSAGES_CHANGED';
 const MESSAGE_ADDED = 'planktonics_chat/business_chat/MESSAGE_ADDED';
 
 let initialState = {
     messages: [
-        {id: '1', message: 'Hello', userName: 'Mark', userId: '12', date: new Date('December 17, 1995 03:24:00')}
+        {id: v1(), message: 'Hi everyone', userName: 'John', userId: v1(), date: new Date(Date.now())},
+        {id: v1(), message: 'Is it a flood chat?', userName: 'John', userId: v1(), date: new Date(Date.now())},
+        {id: v1(), message: 'Hi, yes', userName: 'Peter', userId: v1(), date: new Date(Date.now() + 10000)},
     ] as Message[],
 };
 
