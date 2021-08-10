@@ -14,7 +14,6 @@
     padding: 20px;
     text-align: right;
     font-size: 14pt;
-
 }
 
 .header__business a {
@@ -52,10 +51,12 @@
 @media (max-width: 525px){
     .header__communication {
         text-align: center;
+        font-size: 12pt;
     }
 }
 @media (max-width: 525px){
     .header__business {
         text-align: center;
+        font-size: 12pt;
     }
 }

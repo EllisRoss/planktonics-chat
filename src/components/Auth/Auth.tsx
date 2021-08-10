@@ -30,7 +30,7 @@ export const Auth: React.FC = () => {
             <div className={styles.auth__content}>
                 <h2 className={styles.auth__header}>Planktonics Chat</h2>
                 <p className={styles.auth__text}>Welcome in Planktonics Chat!</p>
-                <p className={styles.auth__text}>Please enter your name:
+                <p className={styles.auth__text}>Enter your name, please
                     <Input className={styles.auth__input} value={value} onChange={e => setValue(e.target.value)}/>
                 </p>
                 <div className={styles.auth__button}>

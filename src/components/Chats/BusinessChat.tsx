@@ -30,11 +30,19 @@ export const BusinessChat: React.FC = () => {
             resetForm({})
         }
     }
+    const deleteMessage = (messageId: string) => {
+        dispatch(businessChatActions.messageDeleted(messageId))
+    }
+    const editMessage = (messageText: string ,messageId: string) => {
+        dispatch(businessChatActions.messageChanged(messageText, messageId));
+    }
 
     return (
         <div>
             <h2 className={styles.chat__header}>Business Chat</h2>
-            <Messages messages={messages} />
+            <Messages messages={messages}
+                      deleteMessage={deleteMessage}
+                      editMessage={editMessage}/>
             <Divider />
             <AddMessageForm sendMessage={sendMessage}/>
         </div>

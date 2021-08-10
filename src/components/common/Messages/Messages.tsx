@@ -3,10 +3,12 @@ import {Message} from "../../../types/types";
 import {MessageItem} from "./MessageItem/MessageItem";
 import styles from './Messages.module.css'
 
-export const Messages: React.FC<MessagesListProps> = ({messages}) => {
+export const Messages: React.FC<MessagesListProps> = ({messages, deleteMessage, editMessage}) => {
 
     const messagesList = messages.map(m => {
-        return <MessageItem message={m} key={m.id} />
+        return <MessageItem message={m} key={m.id}
+                            deleteMessage={deleteMessage}
+                            editMessage={editMessage}/>
     })
 
     const messagesAnchorRef = useRef<HTMLDivElement>(null);
@@ -37,4 +39,6 @@ export const Messages: React.FC<MessagesListProps> = ({messages}) => {
 
 type MessagesListProps = {
     messages: Message[],
+    deleteMessage: (messageId: string) => void,
+    editMessage: (messageText: string ,messageId: string) => void,
 }
