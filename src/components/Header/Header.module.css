@@ -1,49 +1,61 @@
 .header {
-    background-color: darkgrey;
+    /*background-color: darkgrey;*/
 }
+
+.header__title {
+    text-align: center;
+}
+
 .header__navbar {
 
 }
 
 .header__business {
     padding: 20px;
-    text-align: left;
+    text-align: right;
     font-size: 14pt;
+
 }
 
 .header__business a {
     text-decoration: none;
     color: black;
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
 }
 
 .header__business a.active {
-    color: red;
+    background-color: white;
 }
 
 .header__communication {
     padding: 20px;
-    text-align: right;
+    text-align: left;
     font-size: 14pt;
 }
+
 .header__communication a {
     text-decoration: none;
     color: black;
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 10px;
+    width: 230px;
 }
 
 .header__communication a.active {
-    color: red;
+    background-color: white;
 }
-
 
 @media (max-width: 525px){
     .header__communication {
-        background-color: white;
         text-align: center;
     }
 }
 @media (max-width: 525px){
     .header__business {
-        background-color: white;
         text-align: center;
     }
 }
