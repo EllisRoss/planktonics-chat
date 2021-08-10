@@ -1,0 +1,23 @@
+.message {
+}
+
+.message__username {
+    width: 100px;
+    text-align: left;
+    font-size: 14pt;
+    padding: 5px;
+}
+
+.message__text {
+    word-break: break-all;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message__time {
+    width: 100px;
+    text-align: right;
+    font-size: 14pt;
+    padding: 5px;
+}
