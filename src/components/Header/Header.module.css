@@ -1,0 +1,49 @@
+.header {
+    background-color: darkgrey;
+}
+.header__navbar {
+
+}
+
+.header__business {
+    padding: 20px;
+    text-align: left;
+    font-size: 14pt;
+}
+
+.header__business a {
+    text-decoration: none;
+    color: black;
+}
+
+.header__business a.active {
+    color: red;
+}
+
+.header__communication {
+    padding: 20px;
+    text-align: right;
+    font-size: 14pt;
+}
+.header__communication a {
+    text-decoration: none;
+    color: black;
+}
+
+.header__communication a.active {
+    color: red;
+}
+
+
+@media (max-width: 525px){
+    .header__communication {
+        background-color: white;
+        text-align: center;
+    }
+}
+@media (max-width: 525px){
+    .header__business {
+        background-color: white;
+        text-align: center;
+    }
+}
