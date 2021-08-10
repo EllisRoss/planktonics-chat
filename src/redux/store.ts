@@ -2,10 +2,12 @@ import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import thunkMiddleware from "redux-thunk";
 import businessChatReducer from "./businessChatReducer";
 import communicationChatReducer from "./communicationChatReducer";
+import authReducer from "./authReducer";
 
 let rootReducer = combineReducers({
     businessChat: businessChatReducer,
     communicationChat: communicationChatReducer,
+    auth: authReducer,
 });
 
 // @ts-ignore
