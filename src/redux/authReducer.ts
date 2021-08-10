@@ -8,7 +8,7 @@ const IS_AUTH_SWITCHED = 'planktonics_chat/auth/IS_AUTH_SWITCHED';
 let initialState = {
     userName: null as null | string,
     userId: null as null | string,
-    isAuth: false
+    isAuth: false,
 };
 
 const authReducer = (state = initialState, action: ActionTypes): InitialStateType => {

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import "antd/dist/antd.css";
 import './index.css';
-import App from './App';
+import {PlanktonicsChat} from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from "react-redux";
@@ -12,7 +12,7 @@ ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
             <Provider store={store}>
-                <App/>
+                <PlanktonicsChat />
             </Provider>
         </BrowserRouter>
     </React.StrictMode>,
