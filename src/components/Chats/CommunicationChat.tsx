@@ -8,31 +8,34 @@ import {FormikHelpers} from "formik";
 import {Divider} from "antd";
 import {selectCommunicationMessages} from "../../redux/communicationChatSelectors";
 import {communicationChatActions} from "../../redux/communicationChatReducer";
-import { v1 } from "uuid";
+import {v1} from "uuid";
+import {selectUserId, selectUserName} from "../../redux/authSelectors";
 
 export const CommunicationChat: React.FC = () => {
     const messages = useSelector(selectCommunicationMessages);
+    const userName = useSelector(selectUserName);
+    const userId = useSelector(selectUserId);
     const dispatch = useDispatch();
 
-    console.log('fix me (CommunicationChat)')
-
     const sendMessage = (values: FormValues, {resetForm}: FormikHelpers<FormValues>) => {
-        const newMessage: Message = {
-            userName: 'Peter',
-            message: values.msg,
-            userId: '12',
-            date: new Date(Date.now()),
-            id: v1(),
+        if (userName && userId) {
+            const newMessage: Message = {
+                userName: userName,
+                message: values.msg,
+                userId: userId,
+                date: new Date(Date.now()),
+                id: v1(),
+            }
+            dispatch(communicationChatActions.messageAdded(newMessage))
+            resetForm({})
         }
-        dispatch(communicationChatActions.messageAdded(newMessage))
-        resetForm({})
     }
 
     return (
         <div>
-            <h2 className={styles.chat__header}>Business Chat</h2>
-            <Messages messages={messages} />
-            <Divider />
+            <h2 className={styles.chat__header}>Communication Chat</h2>
+            <Messages messages={messages}/>
+            <Divider/>
             <AddMessageForm sendMessage={sendMessage}/>
         </div>
     );
