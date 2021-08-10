@@ -1,0 +1,12 @@
+.form {
+    /*padding-top: 20px;*/
+}
+
+.form__input{
+    border-radius: 10px;
+    background-color: white;
+}
+
+.form__button{
+    width: 80px;
+}
