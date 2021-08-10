@@ -2,3 +2,19 @@
     height: 600px;
     overflow-y: auto;
 }
+
+@media (max-height: 900px) {
+    .messages {
+        height: 400px;
+    }
+}
+@media (max-height: 700px) {
+    .messages {
+        height: 300px;
+    }
+}
+@media (max-height: 600px) {
+    .messages {
+        height: 250px;
+    }
+}
